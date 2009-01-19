@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<!--
+design by
+                                 _   _           
+  __ _        ___ _ __ ___  __ _| |_(_)_   _____ 
+ / _` |_____ / __| '__/ _ \/ _` | __| \ \ / / _ \
+| (_| |_____| (__| | |  __/ (_| | |_| |\ V /  __/
+ \__, |      \___|_|  \___|\__,_|\__|_| \_/ \___|
+ |___/                                                                                  
+
+
+
+-->
+
+	<%= stylesheet_link_tag "general", "forms", "jquery.wysiwyg" %>
+	<%= stylesheet_link_tag "admin" if is_logged_in? %>
+	<%= javascript_include_tag "jquery", "application" %>
+	<%= javascript_include_tag "tiny_mce/tiny_mce.js", "admin", "jquery.wysiwyg.js", "ui.core", "ui.sortable" if is_logged_in? %>
+	<title>Challenge Spi Dauphine 2009 <%= yield :nice_title %></title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	
+	<%= render :partial => 'layouts/admin' %>
+
+	<% if !is_logged_in? %>
+	<div id="corner_infos">
+		18-25 avril 2009
+	</div>
+	<% end %>
+
+	<div id="wrapper">
+		<div id="header">
+		<h1><%= link_to "Challenge SPI Dauphine - Deloitte", root_path %></h1>
+		</div>
+		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0" width="800" height="200" id="defill.swf" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="allowFullScreen" value="false" />
+	<param name="movie" value="<%= image_path('defill.swf?longVal=5000') %>" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" />	<embed src="<%= image_path('defill.swf?longVal=5000') %>" quality="high" bgcolor="#ffffff" width="800" height="200" name="Untitled-1" align="middle" allowScriptAccess="sameDomain" allowFullScreen="false" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" />
+	</object>
+			
+
+		<div id="menu">
+			<% cat_names.each do |c| %>
+				<h2 id="menu_<%= c.id %>"><%= link_to c.name, category_path(c) %>
+					<%if is_logged_in? %><span class="admin_actions">
+						<%= link_to image_tag('layout_delete.png'), category_path(c), :confirm => "La rubrique va être supprimée", :class => 'negative', :method => :delete %>
+						<%= link_to image_tag('layout_edit.png'), edit_category_path(c) %>
+						<%= link_to image_tag('page_add.png'), new_category_page_path(c) %>
+					</span><% end %></h2> 
+			<% end %>
+			<h2><%= link_to "PHOTOS", albums_path %></h2> 
+		</div>
+		<div id="submenu">
+			<% cat_names.each do |c| %>
+				<div id="submenu_<%=c.id%>">
+					<% ordpg = c.pages.sort {|x,y| x.position <=> y.position }
+					   ordpg.each do |p| %>
+						<% if !p.related_id %><span><%= link_to p.title, category_page_path(c,p) %></span><% end %>
+					<% end %>
+				</div>
+			<% end %>
+		</div>
+		<% if is_logged_in? %>
+		<div id="flash">
+			<%= flash[:notice] if flash[:notice] %>
+			<%= flash[:error] if flash[:error] %>
+		</div>
+		<% end %>
+		<%= yield :layout %>
+		<div id="footer" style="clear:both;">&nbsp;</div>
+		
+		
+
+	</div>
+	
+	
+	<div id="sponsors">
+		<div id="had"></div>
+	</div>
+	
+
+	
+	
+</body>
+</html>

@@ -1,0 +1,259 @@
+	
+body {
+	padding:0;
+	margin:0;
+	text-align:center;
+	font-family:Georgia serif;
+	font-size:12px;
+	line-height:18px;
+	min-width:1260px;
+	background:#82afce url(../images/body_bckg.jpg) no-repeat  bottom left;
+}
+
+#wrapper {
+	margin:0 220px 0 220px;
+	padding:0 10px;
+	text-align:left;
+	width:800px;
+	font-family:Georgia;
+	background:url(../images/wrapper_bckg.png);
+}
+
+#corner_infos {
+	position:absolute;
+	width:200px;
+	height:200px;
+	top:100px;
+	left:0;
+	text-indent:-99999em;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/dates_bckg.png', sizingMethod='scale');
+}
+
+html>body #corner_infos {
+	filter:none;
+	background:url(../images/dates_bckg.png) no-repeat;
+}
+
+#flash {
+	padding-left:10px;
+}
+
+#albums {
+	padding:0 10px;
+}	
+
+	#album .info {
+		padding-left:10px;
+		clear:both;
+	}
+	
+	#album h3 {
+		padding-left:10px;
+	}
+	
+	#album .one_photo {
+		padding-left:10px;
+	}
+	
+	#album .bckw_fwd {
+		padding:10px 0 0 300px;
+	}
+
+#files, #ads {
+	padding-left:10px;
+}
+
+#menu {
+	padding:5px 0;
+	display:block;
+	background:#fde url(../images/h2_bckg.png);
+	height:20px;
+	font-family:Arial, sans-serif;
+}
+
+#submenu {
+	background:#ddd url(../images/submenu_bckg.png);
+	font-family:Arial, sans-serif;
+	min-height:20px;
+	padding:0 10px;
+}
+	#submenu span{
+		padding-right:5px;
+	}
+	
+	#submenu a {
+		font-weight:bold;
+	}
+
+#footer {
+	padding:0;
+}
+
+#header {
+	background:#af1645 url(../images/bg-mainn.jpg);
+}
+
+#sponsors{
+	height:55px;
+	margin-top:40px;
+}
+
+
+h1 {
+	margin:0;
+	height:60px;
+	padding:20px 10px;
+	font-family:Arial, sans-serif;
+	font-size:30px;
+	text-indent:-9000em;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/header_bckg.png', sizingMethod='scale');
+}
+
+html>body h1 {
+	filter:none;
+	background:url(../images/header_bckg.png) no-repeat;
+}
+
+	
+	h1 a {
+		display:block;
+		color:#fff;
+		height:100px;
+		padding-top:10px;
+	}
+
+h2 {
+	display:inline;
+	font-size:14px;
+	padding:0 10px;
+	line-height:22px;
+}
+
+	h2 a {
+		color:#fff;
+	}
+	
+	h2 a:hover {
+		color:#ccc;
+	}
+
+h3 {
+	line-height:30px;
+}
+
+h4 {
+	line-height:30px;
+	font-size:12pt;
+	margin-top:10px;
+}
+
+
+a {
+	color:#a92e5a;
+	text-decoration:none;
+}
+
+	a img {
+		border:none;
+	}
+
+.photos {
+	clear:both;
+}
+
+	.photos img {
+		border:1px solid #EEE;
+		border:1px solid;
+		border-color:#666 #EEE #EEE #666;
+	}
+
+	.photos li{
+		width:100px;
+		border:solid #CCC;
+		border-width:0 1px 1px 0;
+		background:#FFF;
+		padding:10px;
+		text-align:center;
+		position:relative;
+		float:left;
+		display:inline;
+		margin:0 5px 5px 5px;
+	}
+	
+.album {
+	margin-bottom:10px;
+}
+
+.album.odd {
+	background:#ebf2f4;
+}
+
+#page_content {
+	width:600px;
+	float:right;
+	text-align:justify;
+	padding:0 10px;
+	color:#000;
+	font-size:14px;
+}
+
+	#page_content a {
+		text-decoration:underline;
+	}
+
+#page_sidebar {
+	width:160px;
+	background:#fde url(../images/sidebar_bckg.png) repeat-x bottom;
+	height:100%;
+	padding:10px 0;
+	min-height:200px;
+}
+
+	#page_sidebar h3 {
+		text-align:center;
+		font-weight:bold;
+		color:#f3e7e7;
+		padding-left:10px;
+		background:#af1645 url(../images/bg-mainn.jpg);
+	}	
+
+	#page_sidebar ul {
+		list-style:none;
+		padding:0;
+		margin:0;
+	}
+	
+	#page_sidebar .odd {
+		background:#fdbfc8;
+	}
+	
+	#page_sidebar .related_page a{
+		padding-left:25px;
+	}
+	
+	#page_sidebar a {
+		display:block;
+		padding:2px 0 2px 10px;
+	}
+	
+	#page_sidebar a:hover {
+		background:#a92e5a url(../images/bg-main.jpg);
+		color:#fff;
+	}
+	
+	#page_sidebar #vad {
+		margin:0;
+		padding:0;
+		padding-top:10px;
+		float:left;
+		display:block;
+	}
+	
+	#page_sidebar #vad a:hover {
+		background:none;
+	}
+	
+	.page_description, #page_title {
+		font-family:Arial,Helvetica,sans-serif;
+	}
+	

@@ -1,0 +1,64 @@
+#nav, #admin {text-align:left;margin:0}
+
+#nav {
+    height: 40px;
+    background: #eee url(../images/nav_bckg.png) repeat-x;
+    font: normal 18px Helvetica, Arial;
+    line-height: 40px;
+    padding-left: 15px;
+    min-width: 800px;
+}
+
+    #nav a {
+        color: #555;
+        text-decoration: none;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        float: left;
+        padding: 0px 15px;
+        outline: 0px;
+    }
+    
+    #nav a:hover {
+    	color:#000;
+    }
+    
+    #nav a.current {
+    	background:url(../images/nav_current_bckg.png) no-repeat bottom center;
+    }
+    
+    #nav .current a:hover {
+    	color:#555;
+    }
+
+	#nav .icons a {
+		padding:10px 10px 0 10px;
+		text-decoration:none;
+		float:right;
+	}
+	
+	#nav .icons a:hover {
+		background:none;
+	}
+
+#admin {
+	padding-left: 15px;
+	background:#fff;
+	margin:0;
+	padding: 0 0 0px 0;
+	border-bottom:#bbb solid 1pt;
+}
+
+	#admin a.big_link {
+		font-family:Georgia;
+		font-size:20px;
+		text-decoration:none;
+	}
+	
+	#admin a:hover.big_link {
+	}
+	
+	#admin div {
+		padding:10px 0;
+	}
